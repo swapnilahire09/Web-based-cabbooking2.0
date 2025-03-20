@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    .container {
+        max-width: 500px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    a {
+        display: block;
+        background: #ffcc00;
+        color: black;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    a:hover {
+        background: #e0a800;
+    }
+    .logout {
+        background: #dc3545;
+        color: white;
+    }
+    .logout:hover {
+        background: #c82333;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2 th:text="${message}"></h2>
+        <h1>Welcome to Admin Panel</h1>
+        <a href="readallcontacts">Read All Contacts</a>
+        <a href="readallbookings">Read All Bookings</a>
+         <a href="addservice">Add Service</a>
+        <a href="changecredentials">Change Credentials</a>
+        <a href="/logout" class="logout">Logout</a>
+    </div>
+</body>
+</html>
